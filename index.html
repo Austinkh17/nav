@@ -1,0 +1,650 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery左侧滑动可定位网页</title>
+<link rel="stylesheet" href="css/css.css" type="text/css" media="all" />
+<link rel='stylesheet' type='text/css'>
+
+<style>
+#wrap{margin:10px auto;width:640px;overflow:hidden;}
+/* 1 */
+.item1 img{vertical-align:top;}
+.item1 li{position:relative;float:left;margin-right:3px;width:157px;height:203px;overflow:hidden;cursor:pointer;}
+.item1 div{position:absolute;left:0;top:120px;width:100%;height:50px;text-align:center;background:url("images/demo02.png") no-repeat;color:#FFF;overflow:hidden;}
+.item1 p{display:none;margin:5px auto 0;width:135px;line-height:20px;text-align:left;text-indent:2em;font-size:12px;}
+.item1 h3{margin:11px 0;height:25px;}
+
+</style>
+
+
+<script src="https://cdn.bootcss.com/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/pagescroller.min.js"></script>
+<script type="text/javascript">
+
+	
+
+	$(document).ready(function(){
+
+		
+
+		var navLabel = new Array('论坛', '工具', "资源", '素材', '搜索');
+
+		
+
+		$('#main').pageScroller({ navigation: navLabel });
+
+		
+
+		$('.next').click(function(e){
+
+			e.preventDefault();
+
+			pageScroller.next();
+
+		});
+
+			
+
+		$('.prev').click(function(e){
+
+			e.preventDefault();
+
+			pageScroller.prev();
+
+		});
+
+		
+
+		$('.jumpTo').click(function(e){
+
+			e.preventDefault();
+
+			pageScroller.goTo(4);
+
+		});
+
+					
+
+	});	
+
+	</script>
+</head>
+<body>
+<div id="lrzj" class="light">
+<a href="#" class="prev"><img src="images/icon_arrow-up_light.png" alt="" width="28" height="31" /></a>
+<a href="#" class="next"><img src="images/icon_arrow-down_light.png" alt="" width="28" height="31" /></a> </div>
+<div id="wrapper">
+<div id="main">
+<div class="section"><h1>论坛</h1>
+
+<div id="wrap">
+<ul class="item1">
+
+<a href="https://segmentfault.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>segmentfault</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.csdn.net/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>csdn</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.jianshu.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>简书</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.imooc.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>慕课</h3>
+<p>慕课网是IT技能学习平台。提供了丰富的移动端开发、php开发、web前端、android开发以及html5等视频教程资源公开课。</p>
+</div>
+</li>
+</a>
+
+<a href="https://juejin.im/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>掘金</h3>
+<p>是一个帮助开发者成长的社区,是给开发者用的 Hacker News,给设计师用的 Designer News,和给产品经理用的 Medium。</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.jqhtml.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>前端库</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.v2ex.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>v2ex</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="http://web.jobbole.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>伯乐在线</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://aotu.io/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>凹凸实验室</h3>
+<p>是一个帮助开发者成长的社区,是给开发者用的 Hacker News,给设计师用的 Designer News,和给产品经理用的 Medium。</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.chongbuluo.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>虫部落</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.w3cplus.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>w3cplus</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.awesomes.cn/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>awesomes</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.css88.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>web前端开发</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.php.cn/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>php中文网</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.xuanfengge.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>轩枫阁</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://cnodejs.org/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>cnode</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.html5tricks.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>html5资源教程</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://vuejsfeed.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>vuejsfeed</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://vuejsexamples.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>Vue.js Examples</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://vuejsdevelopers.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>Vue.js Developers</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://madewithvuejs.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>Vue.js Showcase</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.nowcoder.com/6548043">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>牛客网</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+</ul>
+</div>
+
+</div>
+
+<div class="section"><h1>工具<a class="jumpTo">Jump To 4</a></h1>
+
+<div id="wrap">
+<ul class="item1">
+
+<a href="http://md.aclickall.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>MD2All</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://tool.lu/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>在线工具</h3>
+<p>程序员的工具箱</p>
+</div>
+</li>
+</a>
+
+<a href="https://pandao.github.io/editor.md/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>editor.md</h3>
+<p>开源在线 Markdown 编辑器</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.wendangwang.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>文档网</h3>
+<p>开源在线 Markdown 编辑器</p>
+</div>
+</li>
+</a>
+
+<a href="http://bj.96weixin.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>96微信编辑器</h3>
+<p>开源在线 Markdown 编辑器</p>
+</div>
+</li>
+</a>
+
+</ul>
+</div>
+
+</div>
+
+<div class="section"><h1>资源</h1>
+
+<div id="wrap">
+<ul class="item1">
+
+<a href="http://www.sucaihuo.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>素材火</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.17sucai.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>17素材</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.ke01.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>科蚁网</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://hellogithub.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>HelloGitHub</h3>
+<p>分享 GitHub 上
+有趣、入门级的开源项目</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.ypppt.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>优品ppt</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.xwcms.net/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>素材网</h3>
+<p>小众实用导航</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.jb51.net/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>脚本之家</h3>
+<p>慕课网是IT技能学习平台。提供了丰富的移动端开发、php开发、web前端、android开发以及html5等视频教程资源公开课。</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.jq22.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>jquery插件库</h3>
+<p>分享 GitHub 上
+有趣、入门级的开源项目</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.htmleaf.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>jquery之家</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.itjc8.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>IT教程吧</h3>
+<p>小众实用导航</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.52pojie.cn/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>吾爱破解</h3>
+<p>慕课网是IT技能学习平台。提供了丰富的移动端开发、php开发、web前端、android开发以及html5等视频教程资源公开课。</p>
+</div>
+</li>
+</a>
+
+</ul>
+</div>
+
+</div>
+
+<div class="section"><h1>素材</h1>
+
+<div id="wrap">
+<ul class="item1">
+
+</ul>
+</div>
+
+</div>
+
+<div class="section"><h1>搜索</h1>
+
+<div id="wrap">
+<ul class="item1">
+
+<a href="http://www.yunpuzi.net/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>云铺子</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="http://search.chongbuluo.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>虫部落快搜</h3>
+<p>是中国领先的开发者社区。
+我们希望为中文开发者提供一个纯粹、高质的技术交流平台，
+与开发者一起学习、交流与成长，创造属于开发者的时代！</p>
+</div>
+</li>
+</a>
+
+<a href="http://taoxiaozhong.com/dh">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>淘小众</h3>
+<p>小众实用导航</p>
+</div>
+</li>
+</a>
+
+<a href="http://www.3134.cc/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>搜啦</h3>
+<p>慕课网是IT技能学习平台。提供了丰富的移动端开发、php开发、web前端、android开发以及html5等视频教程资源公开课。</p>
+</div>
+</li>
+</a>
+
+<a href="http://s.kuaiso.com/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>快搜</h3>
+<p>小众实用导航</p>
+</div>
+</li>
+</a>
+
+<a href="https://www.xiaoso.net/">
+<li>
+<img src="images/demo01.jpg"  width="157" height="203" />
+<div>
+<h3>小不点搜索</h3>
+<p>慕课网是IT技能学习平台。提供了丰富的移动端开发、php开发、web前端、android开发以及html5等视频教程资源公开课。</p>
+</div>
+</li>
+</a>
+
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+/* 1 */
+$(function(){
+		$(".item1 li").hover(
+			function(){
+				var that=this;	
+				item1Timer=setTimeout(function(){
+					$(that).find("div").animate({"top":0,"height":204},300,function(){
+						$(that).find("p").fadeIn(200);
+					});
+				},100);
+			},
+			function(){
+				var that=this;	
+				clearTimeout(item1Timer);
+				$(that).find("p").fadeOut(200);
+				$(that).find("div").animate({"top":120,"height":50},300);
+			}
+		)
+});
+</script>
+
+</body>
+</html>
